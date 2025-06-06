@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accesorios Motopartes Revolutión Orantes</title>
+</head>
+<body>
+
+  <link rel="stylesheet" href="styles.css">
+  <header>
+    <h1>Motopartes Revolutión Orantes</h1>
+    <p>Equipando tu pasión por las dos ruedas</p>
+  </header>
+
+  <div class="scroll-text" aria-label="Información del usuario">
+    <span>Nombre: Sebastian Salazar Orantes | Carnet: 0900-25-993</span>
+  </div>
+
+  <div style="text-align:center; margin-top: 10px;">
+    <button onclick="iniciarMusica()" style="padding: 10px 20px; font-size: 16px; background-color: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer;">
+      🎵 Reproducir Música
+    </button>
+  </div>
+
+  <div id="videoMusica" style="display:none;">
+    <iframe id="iframeMusica" width="0" height="0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <nav>
+    <a href="#quienes">Quiénes somos</a>
+    <a href="#mision">Misión y Visión</a>
+    <a href="#productos">Productos</a>
+    <a href="#proveedores">Proveedores</a>    
+    <a href="#clientes">Clientes</a>
+    <a href="#contacto">Contáctenos</a>
+  </nav>
+
+  <section id="quienes">
+    <h2>¿Quiénes somos?</h2>
+    <p>En <strong>Accesorios Motopartes Revolutión Orantes</strong>, somos más que una tienda...</p>
+    <img src="https://i.postimg.cc/8PVMMtHF/image.png" alt="Foto del alumno" />
+  </section>
+
+  <section id="mision">
+    <h2>Misión</h2>
+    <p>En Motopartes Revolutión Orantes, nuestra misión es proporcionar...</p>
+
+    <h2>Visión</h2>
+    <p>Ser la empresa líder en el mercado nacional e internacional...</p>
+  </section>
+
+  <section id="productos" class="productos">
+    <h2>Productos</h2>
+    <h3><strong>🔧 Accesorios de protección:</strong></h3>
+    <p><strong>Casco animado</strong> - Q550</p>
+    <img src="https://via.placeholder.com/160" alt="Casco" />
+    <p><strong>Guantes Racer</strong> - Q180</p>
+    <img src="https://via.placeholder.com/160" alt="Guantes" />
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Motopartes Revolutión Orantes. Todos los derechos reservados.</p>
+  </footer>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Volver arriba">↑</button>
+
+  <script>
+    function iniciarMusica() {
+      const video = document.getElementById("videoMusica");
+      const iframe = document.getElementById("iframeMusica");
+      video.style.display = "block";
+      iframe.src = "https://www.youtube.com/embed/xp2qjshr-r4?autoplay=1";
+    }
+    window.onscroll = function () {
+      document.getElementById("scrollTopBtn").style.display =
+        (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
